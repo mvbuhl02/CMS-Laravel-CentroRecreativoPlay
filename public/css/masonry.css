@@ -1,0 +1,102 @@
+/* Defaults */
+body {
+  background: #f9f9f9;
+  color: #465665;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Masonry grid */
+.masonry {
+  transition: all .5s ease-in-out;
+  column-gap: 15px;
+  column-fill: initial;
+}
+.img-gallery{
+    width: 400px;
+}
+/* Masonry item */
+.masonry .brick {
+  margin-bottom: 30px;
+  display: inline-block; /* Fix the misalignment of items */
+  vertical-align: top; /* Keep the item on the very top */
+}
+
+.masonry .brick .gallery-picture {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+/* Masonry image effects */
+.masonry .brick .gallery-picture img {
+    opacity: 0.60;
+    filter: blur(6px);
+    filter: contrast(110%);
+
+}
+.masonry .brick .gallery-picture:hover img {
+    opacity: .99;
+    filter: contrast(100%);
+  }
+.text-gallery{
+    position: absolute;
+}
+.masonry .brick:hover img {
+  opacity: .99;
+  filter: contrast(110%);
+}
+
+/* Bordered masonry */
+.masonry.bordered {
+  column-rule: 1px solid #eee;
+  column-gap: 50px;
+}
+
+.masonry.bordered .brick {
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Gutterless masonry */
+.masonry.gutterless {
+  column-gap: 0;
+}
+
+.masonry.gutterless .brick {
+  margin-bottom: 0;
+}
+
+/* Masonry on tablets */
+@media only screen and (min-width: 268px) and (max-width: 1023px) {
+  .masonry {
+    column-count: 2;
+    column-gap: 18px;
+  }
+  /* Bordered masonry */
+  .masonry.bordered {
+    column-rule: 1px solid #eee;
+    column-gap: 5px;
+  }
+  .masonry .brick {
+    margin-bottom: 20px;
+  }
+}
+
+/* Masonry on big screens */
+@media only screen and (min-width: 1024px) {
+  .desc {
+    font-size: 1.25em;
+  }
+
+  .intro {
+    letter-spacing: 1px;
+  }
+
+  .masonry {
+    column-count: 3;
+  }
+}
