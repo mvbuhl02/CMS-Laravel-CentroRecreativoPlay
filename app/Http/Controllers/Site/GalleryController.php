@@ -53,11 +53,11 @@ $page = $request->page;
     ->offset($ofs)
     ->limit($max)
     ->orderBy('id', 'DESC')
-    ->all();
+    ->get();
 
 
 
-
+        return $pictures;
 
     //return view('site.page', ['pictures' => $pictures]) ;
 
@@ -73,7 +73,7 @@ $page = $request->page;
 
     return view('user',compact('users'));
 */
-    return 1234;
+    //return 1234;
         //
         /*
         $data = $request->only([

@@ -50,7 +50,7 @@
 
                  <!-- Button trigger modal -->
                  <div class="col-md-4">
-                   <div  style="margin-bottom:1.6rem; width: 100%; height:20rem;background-image: url('{{ asset('media/courses/pictures/'.$picture->filename) }}')"  data-bs-toggle="modal" data-bs-target="#picture{{$picture->id}}">
+                   <div  style="margin-bottom:1.6rem; width: 100%; background-size: cover; height:20rem;background-image: url('{{ asset('media/courses/pictures/'.$picture->filename) }}')"  data-bs-toggle="modal" data-bs-target="#picture{{$picture->id}}">
                    </div>
                  </div>
 

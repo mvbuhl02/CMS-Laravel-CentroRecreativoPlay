@@ -56,44 +56,14 @@
         <div class="card">
             <div class="card-body">
                 <h2 class="text-center bold ">ADICIONAR NOVO SLIDE</h2>
-                <form action="{{route('slider.store')}}" method="POST" class="form-horizontal" enctype="multipart/form-data">
 
-                    @csrf
-                    <div class="form-group">
-                        <div class="row">
-                            <label class="col-sm-2 control-label">Texto</label>
-                            <div class="col-sm-10">
-                                <textarea class="" name="text"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class=" container form-row">
-                        <input class="form-check-input" type="checkbox" name="main" value="1" id="main">
-                        <label class="form-check-label">
-                            Principal
-                        </label>
-                    </div>
-                    <hr>
                     <form class="form row" action="{{route('slider.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <input  class="form-control form-control-lg" id="formFile" type="file" name="filename[]" multiple>
                         <button type="submit" class="btn btn-primary">Salvar</button>
                     </form>
-                </form>
             </div>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-        <script src="{{ asset('tinymce.min.js') }}" referrerpolicy="origin"></script>
-        <script>
-        tinymce.init({
-        selector: 'textarea',  // change this value according to your HTML
-        fullpage_default_text_color: 'blue'
-
-        });
-
-        </script>
 </div>
 
 @endsection

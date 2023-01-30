@@ -88,12 +88,10 @@
     tinymce.init({
 
   selector: 'textarea',  // change this value according to your HTML
-  force_br_newlines : true,
-  force_p_newlines : false,
-  plugins : 'advlist autolink link image lists charmap print preview',
-  plugins: 'lists',
-  language: 'tinymce\js\tinymce\langs\pt_BR.js'
 
+  plugins: 'print preview fullpage powerpaste searchreplace autolink directionality advcode visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount tinymcespellchecker a11ychecker imagetools mediaembed  linkchecker contextmenu colorpicker textpattern help',
+  image_advtab: true,
+  a_plugin_option: true,
 });
 </script>
 

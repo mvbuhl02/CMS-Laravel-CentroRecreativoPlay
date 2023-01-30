@@ -42,7 +42,7 @@ Auth::routes();
 
 //-- Página Home --
 Route::get('/', [App\Http\Controllers\Site\HomeController::class, 'index']);
-Route::post('galeria', [App\Http\Controllers\Site\GalleryController::class, 'loadPictures']);
+Route::get('galeria', [App\Http\Controllers\Site\GalleryController::class, 'loadPictures']);
 Route::get('retornoajax', function(){
     return view ('site.page');
 });
@@ -55,6 +55,7 @@ Route::get('retornoajax', function(){
 Route::prefix('/painel')->group(function(){
 
     //-- AUTH --
+
     Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin');
 
     Route::get('/login', [LoginController::class, 'index']);

@@ -74,46 +74,19 @@
     });
 
 
-    // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        loop: true,
-        center: true,
-        dots: false,
-        nav: true,
-        navText : [
-            '<i class="bi bi-chevron-left"></i>',
-            '<i class="bi bi-chevron-right"></i>'
-        ],
-        responsive: {
-            0:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:3
-            }
-        }
-    });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 })(jQuery);
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -144,7 +117,10 @@ function reply_click(clicked_id){
 }
 
 
-
+if(data.length == 0)
+{
+    alert('stop');
+}
 function loadMore(clicked_id){
 
     $.ajax({
@@ -177,3 +153,24 @@ function loadMore(clicked_id){
     });
 }
 
+
+/*
+btn.addEventListener('click', function(){
+
+    console.log(1);
+});
+*/
+
+/*
+function loadPictures(page, id) {
+    $.ajax({
+        url: "{{route('galeria.loadPictures')}}",
+        method: 'POST',
+        "_token": "{{ csrf_token() }}",
+        data: {'page':page, 'id':id},
+        dataType: 'JSON'
+    }).done(function (res){
+        alert(res);
+    });
+}
+*/
