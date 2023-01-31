@@ -13,6 +13,7 @@
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
         "laravel/ui": "^4.0",
+        "php-di/php-di": "^7.0",
         "tinymce/tinymce": "^6.1"
     },
     "require-dev": {
