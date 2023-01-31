@@ -59,9 +59,8 @@ class SliderController extends Controller
                 $extension = $image->getClientOriginalExtension();
 
                 if($extension == 'gif'){
-                    $image_resize = $image->getRealPath();
                     $filename = rand(1,99999) . '.' . $extension;
-                    $image_resize->save(public_path('/media/slider/'.$filename));
+                    $image_resize = copy($image->getRealPath(), public_path('/media/slider/'.$filename));
                 }else{
                     $image_resize = Image::make($image->getRealPath());
                     $filename = rand(1,99999) . '.' . 'webp';
@@ -130,12 +129,14 @@ class SliderController extends Controller
             $text = $request['text'];
             $slide = $request['slide'];
             $main = $request['main'];
-
+            
+            // set main slide
             if($main == 1){
                 DB::table('slider')
-                ->where('main', 1)  // find your user by their email
-                ->update(array('main' => 0));  // update the record in the DB.
+                ->where('main', 1)  
+                ->update(array('main' => 0));  
             }
+
             $slider->text = $request->text;
 
             $slider->main=$main;
@@ -177,7 +178,6 @@ class SliderController extends Controller
         return back();
 
     }
-
 
 
 }

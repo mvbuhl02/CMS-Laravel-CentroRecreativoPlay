@@ -241,12 +241,14 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'Pesquisar',
         ],
+        /*
         [
             'text'        => 'Dashboard',
             'url'         => 'painel',
             'icon'        => 'fas fa-chart-pie',
             'label_color' => 'success',
         ],
+        */
         [
             'text'        => 'Slider',
             'url'         => 'painel/slider',

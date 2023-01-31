@@ -44,7 +44,7 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\Site\HomeController::class, 'index']);
 Route::get('galeria', [App\Http\Controllers\Site\GalleryController::class, 'loadPictures']);
 Route::get('retornoajax', function(){
-    return view ('site.page');
+    return view('site.page');
 });
 //Route::resource('galeria', GalleryOneController::class);
 // teste de upload de imagens
@@ -55,16 +55,14 @@ Route::get('retornoajax', function(){
 Route::prefix('/painel')->group(function(){
 
     //-- AUTH --
-
+    Route::get('login', [LoginController::class, 'index']);
+    Route::post('/login', [LoginController::class, 'authenticate']);
     Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin');
 
-    Route::get('/login', [LoginController::class, 'index']);
-    Route::post('/login', [LoginController::class, 'authenticate']);
 
-    Route::get('/register', [RegisterController::class, 'index'])->name('register');
-    Route::post('register', [RegisterController::class, 'register']);
 
-    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+    Route::resource('register', RegisterController::class);
+
 
 
 

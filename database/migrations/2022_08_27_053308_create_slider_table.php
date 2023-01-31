@@ -17,7 +17,7 @@ return new class extends Migration
         Schema::create('slider', function (Blueprint $table) {
                 $table->id();
                 $table->tinyInteger('main')->default('0');
-                $table->string('slide', 50);
+                $table->string('slide', 50)->nullable();
                 $table->string('text', 500)->nullable();
                 $table->timestamps();
         });

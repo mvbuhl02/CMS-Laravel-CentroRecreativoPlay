@@ -51,24 +51,19 @@
                 </div>
             </div>
             <hr>
-            <form class="form row" action="{{route('galleryOne.store')}}" method="POST" enctype="multipart/form-data">
-                @csrf
-                <input class="form-control form-control-lg" id="formFile" type="file" name="filename[]" multiple>
-                <button type="submit" class="btn btn-primary">Salvar</button>
-            </form>
+            <button type="submit" class="btn btn-primary">Salvar</button>
         </form>
     </div>
 </div>
 
-<script src="{{ asset('tinymce.min.js') }}" referrerpolicy="origin"></script>
+<script src="{{ asset('tinymce.min.js') }}" referrerpolicy="origin">
+</script>
 <script>
 tinymce.init({
   selector: 'textarea',  // change this value according to your HTML
-
-  plugins: ' image link media  table hr advlist lists textcolor anchor colorpicker textpattern help',
+  plugins: 'table help',
   image_advtab: true,
   a_plugin_option: true,
 });
-
 </script>
 @endsection

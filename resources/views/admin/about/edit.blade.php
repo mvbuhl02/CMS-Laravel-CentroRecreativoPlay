@@ -69,7 +69,7 @@
         <div class="row">
             <label class="col-sm-2 control-label">Endereço</label>
             <div class="col-sm-10">
-                <textarea name="address">{{$about->address}}</textarea>
+                <input type="text" name="address" value="{{$about->address}}" class="form-control">
             </div>
         </div>
     </div>
@@ -83,7 +83,7 @@
     </div>
     <div class="form-group">
         <div class="row">
-            <label class="col-sm-2 control-label">Titulo (Sobre Nós)</label>
+            <label class="col-sm-2 control-label">(Sobre Nós) introdução explicativa</label>
             <div class="col-sm-10">
                 <input type="text" value="{{$about->title}}" name="title" class="form-control">
             </div>

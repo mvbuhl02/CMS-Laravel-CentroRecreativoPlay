@@ -70,7 +70,7 @@
                 <div class="row">
                     <label class="col-sm-2 control-label">Endereço</label>
                     <div class="col-sm-10">
-                        <textarea class="" name="address"></textarea>
+                        <input type="text" name="address" class="form-control">
                     </div>
                 </div>
             </div>

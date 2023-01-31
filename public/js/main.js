@@ -106,14 +106,24 @@
 
 
 
-
-
-
-
-
-
-
 })(jQuery);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -132,6 +142,8 @@ function reply_click(clicked_id){
     id = clicked_id;
     page ++;
 
+    console.log(id);
+
     if(preLoaded.indexOf(id) === -1)
     {
 
@@ -142,38 +154,3 @@ function reply_click(clicked_id){
     }
     }
 }
-
-
-
-function loadMore(clicked_id){
-
-    $.ajax({
-        url: "galeria",
-        method: 'get',
-        dataType: 'json',
-        data: {'id':id, 'page':page}
-    }).done(function (data){
-    dataLeng = data.length;
-
-    $(document).ready(function () {
-
-      });
-        if (data.length > 0) {
-            var html = ""
-            //loop
-            $(data).each(function(i, v) {
-              //generate htmls//
-              html += ` <div class="carousel-item">
-              <img class='img-size' src='media/courses/pictures/${v.filename}' alt='Second slide' />
-          </div>`
-            })
-
-
-
-
-            //insert new html after last slide
-            $(html).insertAfter('#carousel-'+id+' .carousel-item:last')
-          }
-    });
-}
-

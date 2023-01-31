@@ -15,18 +15,18 @@ return new class extends Migration
     {
         Schema::create('about', function (Blueprint $table) {
             $table->id();
-            $table->string('phone', 50);
-            $table->string('whatsapp', 50);
-            $table->string('instagram', 50);
-            $table->string('facebook', 50);
-            $table->text('address');
-            $table->text('email', 100);
-            $table->string('logo', 20);
-            $table->string('picture', 20);
-            $table->string('favicon', 20);
-            $table->text('text', 900);
-            $table->string('title', 200);
-            $table->string('keywords', 600);
+            $table->string('phone', 50)->nullable();
+            $table->string('whatsapp', 50)->nullable();
+            $table->string('instagram', 50)->nullable();
+            $table->string('facebook', 50)->nullable();
+            $table->text('address')->nullable();
+            $table->text('email', 100)->nullable();
+            $table->string('logo', 20)->nullable();
+            $table->string('picture', 20)->nullable();
+            $table->string('favicon', 20)->nullable();
+            $table->text('text', 900)->nullable();
+            $table->string('title', 200)->nullable();
+            $table->string('keywords', 600)->nullable();
             $table->timestamps();
         });
     }

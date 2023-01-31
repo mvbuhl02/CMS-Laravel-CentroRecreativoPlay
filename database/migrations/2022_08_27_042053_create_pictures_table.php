@@ -18,7 +18,9 @@ return new class extends Migration
     {
         Schema::create('pictures', function (Blueprint $table) {
             $table->id();
-            $table->string('filename', 20)->nullable(false);
+            $table->string('filename', 20)->nullable();
+            $table->integer('width')->nullable();
+            $table->integer('height')->nullable();
             $table->foreignIdFor(Course::class)->references('id')->on('courses')->onDelete('CASCADE');
             $table->timestamps();
         });

@@ -74,7 +74,7 @@ class CourseController extends Controller
             $image = $request->file('cover_image');
             $new_name = rand(1,99999) . '.' . 'webp';
             $image_resize = Image::make($image->getRealPath());
-                $image_resize->resize(null, 676, function ($constraint) {
+                $image_resize->resize(null, 476, function ($constraint) {
                     $constraint->aspectRatio();
                 });
             $image_resize->encode('webp', 90)->save(public_path('/media/courses/cover_images/'.$new_name));
@@ -85,28 +85,6 @@ class CourseController extends Controller
         /*
             <--------UPLOAD PICTURE/GALLERY-------->
         */
-        if ($request->hasfile('filename')) {
-        $this->validate($request, [
-            'filename' => 'required',
-            'filename.*' => 'image|mimes:jpeg,png,jpg,gif,webp,svg|max:2048'
-        ]);
-
-            $images = $request->file('filename');
-
-        foreach($images as $image) {
-                $filename = rand(1,99999) . '.' . 'webp';
-                $image_resize = Image::make($image->getRealPath());
-                $image_resize
-                ->resize(null, 776, function ($constraint) {
-                    $constraint->aspectRatio();
-                });
-                $image_resize->encode('webp', 90)->save(public_path('/media/courses/pictures/'.$filename));
-                $upload_pictures= new Picture();
-                $upload_pictures->course_id = $course->id;
-                $upload_pictures->filename = $filename;
-                $upload_pictures->save();
-                }
-            }
 
         return back()->with('sucesso', 'Upload bem sucedido');
     }
