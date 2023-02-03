@@ -17,6 +17,7 @@
         "tinymce/tinymce": "^6.1"
     },
     "require-dev": {
+        "deployer/deployer": "^7.1",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.0.1",

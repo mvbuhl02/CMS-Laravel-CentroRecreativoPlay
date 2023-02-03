@@ -228,7 +228,7 @@
             </div>
         </div>
 
-    <div class="container">
+    <div id="equipe" class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h2 class="mb-5 text-primary-gradient">Equipe</h2>
         </div>

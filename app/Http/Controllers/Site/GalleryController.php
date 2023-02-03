@@ -8,14 +8,11 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Cache;
 
 use App\Models\Picture;
-use App\Models\Course;
+
 
 class GalleryController extends Controller
 {
-    public function index(){
-        $slider= Slider::all();
-        $courses = Course::all();
-    }
+
 
     public function loadPictures(Request $request){
     $id =  $request->id;
@@ -30,19 +27,6 @@ class GalleryController extends Controller
     ->select('filename', 'width', 'height')
     ->orderBy('id', 'DESC')
     ->get();
-
-    //return $pictures;
-
-
-/*
-    return response()
-    ->json([
-        'src' => 'media/courses/pictures/'.$pic->filename,
-        'width' => $pic->width,
-        'height' => $pic->height
-    ])
-    ->withCallback($request->input('callback'));
-*/
 
 $pictures_json = $pictures->map(function($pic) {
 

@@ -74,6 +74,8 @@ Route::prefix('/painel')->group(function(){
     Route::resource('cursos', CourseController::class);
 
 
+    Route::get('loadGalleries', [GalleriesController::class, 'loadGalleries']);
+
 
     // Galleries controllers
     Route::get('galeria', [GalleriesController::class, 'index']);
