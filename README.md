@@ -1,5 +1,7 @@
 # Índice
 
+versão beta: <https://centroplaycaf.com.br>
+
 ### 1. Introdução
 - Objetivo
 - Escopo
