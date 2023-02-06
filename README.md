@@ -1,20 +1,15 @@
 # Índice
 
-## 1. Introdução
+### 1. Introdução
 - Objetivo
 - Escopo
-
-## 2. Requisitos de sistema
-
-## 4. Desenvolvimento
+### 2. Requisitos de sistema
+### 4. Desenvolvimento
 - Design
 - Template Engine Blade
-
-## 5. APIs
+### 5. APIs
 - AdminLTE
 - PhotoSwipe
-
-
 
 
 
@@ -25,6 +20,7 @@ O objetivo deste projeto é criar um site para uma escola, com seções para cur
 
 ### Escopo
 O site terá as seguintes seções:
+- adição de novos administradores
 - Listagem de cursos oferecidos pela escola
 - Galerias de fotos dos eventos realizados
 - Informações gerais sobre a escola, incluindo histórico, missão e valores
