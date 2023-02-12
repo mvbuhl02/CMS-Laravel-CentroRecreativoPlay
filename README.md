@@ -29,7 +29,6 @@ O site terá as seguintes seções:
 
 
 ## 2. Requisitos
-- Sistema operacional: Windows 10 ou MacOS X
 - PHP >= 7.4
 - MySQL >= 5.7
 - Composer
