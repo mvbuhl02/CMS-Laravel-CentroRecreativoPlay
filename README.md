@@ -1,6 +1,6 @@
 # Índice
 
-### versão beta: <https://centroplaycaf.com.br>
+### Site: <https://centroplaycaf.com.br>
 
 ### 1. Introdução
 - Objetivo
