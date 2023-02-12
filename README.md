@@ -21,7 +21,7 @@
 O objetivo deste projeto é criar um site para uma escola, com seções para cursos e galerias de fotos, oferecendo informações sobre a escola aos visitantes, utilizando o framework PHP Laravel.
 
 ### Escopo
-O site terá as seguintes seções:
+O sistema CMS terá as seguintes seções:
 - adição de novos administradores
 - Listagem de cursos oferecidos pela escola
 - Galerias de fotos dos eventos realizados
@@ -40,7 +40,7 @@ O site terá as seguintes seções:
 O design do site será baseado em HTML, CSS e JavaScript. Utilizaremos o framework CSS Bootstrap para garantir uma experiência de usuário responsiva e de alta qualidade. Além disso, utilizaremos o jQuery para criar interações enriquecedoras e melhorar a experiência do usuário. O objetivo é criar uma interface intuitiva e atraente, que transmita a personalidade e os valores da escola.
 
 ### Template Engine Blade
-Também utilizaremos o Template Engine Blade, que vem integrado ao Laravel, para criar as views do site. O Blade permite criar templates elegantes e reutilizáveis, além de facilitar a manutenção do código.
+Também utilizaremos o Template Engine Blade, que vem integrado ao Laravel, para criar as views do site. O Blade permite criar templates elegantes e reutilizáveis, além de facilitar a manutenção do código. Para o navBar e footer template elementos sob licença MIT de: HTML Codex.
 
 
 ### 4. APIs
