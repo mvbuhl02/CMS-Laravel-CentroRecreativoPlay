@@ -47,7 +47,7 @@ Também utilizaremos o Template Engine Blade, que vem integrado ao Laravel, para
 
 Este projeto utilizará diversas APIs para garantir o funcionamento completo e a melhor experiência para o usuário. As APIs utilizadas incluem:
 
-- AdminLTE: para a administração do site
+- AdminLTE: para a administração do conteúdo site
 - PhotoSwipe: para as galerias de fotos dos eventos realizados
 
 Estas APIs foram escolhidas por oferecerem uma interface intuitiva, fácil de usar e de alta qualidade para gerenciar o conteúdo da escola e fornecer a melhor experiência para o usuário.
