@@ -6,10 +6,10 @@
 - Objetivo
 - Escopo
 ### 2. Requisitos de sistema
-### 4. Desenvolvimento
+### 3. Desenvolvimento
 - Design
 - Template Engine Blade
-### 5. APIs
+### 4 APIs
 - AdminLTE
 - PhotoSwipe
 
